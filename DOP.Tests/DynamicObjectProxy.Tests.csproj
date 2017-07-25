@@ -53,9 +53,9 @@
     <Compile Include="UnitTestWithRegistration.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DOP\DynamicObjectProxy.csproj">
+    <ProjectReference Include="..\DOP\DynamicObjectProxyNew.csproj">
       <Project>{6721B822-3F99-42FA-B89D-1E31FB431E1A}</Project>
-      <Name>DynamicObjectProxy</Name>
+      <Name>DynamicObjectProxyNew</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

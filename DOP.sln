@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicObjectProxy", "DOP\DynamicObjectProxy.csproj", "{6721B822-3F99-42FA-B89D-1E31FB431E1A}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicObjectProxyNew", "DOP\DynamicObjectProxyNew.csproj", "{6721B822-3F99-42FA-B89D-1E31FB431E1A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicObjectProxy.Tests", "DOP.Tests\DynamicObjectProxy.Tests.csproj", "{287ED5C9-7A4F-4718-B109-8840168188D8}"
 EndProject
