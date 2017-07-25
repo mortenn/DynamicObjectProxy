@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CBObjectExtender</name>
+    </assembly>
+    <members>
+        <member name="T:CBOExtender.IConcerns">
+            Marker interface
+        </member>
+        <member name="T:CBOExtender.ConcernsContainer">
+            
+        </member>
+        <member name="F:CBOExtender.ConcernsContainer.runtimeAspects">
+            Contains Decoration objects from configuration file.
+        </member>
+        <member name="T:CBOExtender.AspectContext">
+            
+        </member>
+        <member name="M:CBOExtender.AspectContext.#ctor(System.Object,System.Runtime.Remoting.Messaging.IMethodCallMessage)">
+            
+        </member>
+        <member name="P:CBOExtender.AspectContext.Target">
+            object type Target
+        </member>
+        <member name="P:CBOExtender.AspectContext.CallCtx">
+            
+        </member>
+        <member name="T:CBOExtender.AspectContext2">
+            
+        </member>
+        <member name="M:CBOExtender.AspectContext2.#ctor(System.Object,System.Runtime.Remoting.Messaging.IMethodCallMessage)">
+            
+        </member>
+        <member name="P:CBOExtender.AspectContext2.Target">
+            dynamic type Target
+        </member>
+        <member name="P:CBOExtender.AspectContext2.CallCtx">
+            
+        </member>
+        <member name="T:CBOExtender.DecorationDelegate">
+            Delegate for aspect method
+        </member>
+        <member name="T:CBOExtender.DecorationDelegate2">
+            Delegate for aspect method with dynamic type
+        </member>
+        <member name="T:CBOExtender.Decoration">
+            Has an aspect method (DecorationDelegate) and a parameter array for the method
+        </member>
+        <member name="M:CBOExtender.Decoration.#ctor(CBOExtender.DecorationDelegate,System.Object[])">
+            <param name="aspectHandler">The delegate of aspect method.</param>
+            <param name="parameters">The object array as parameters for the aspect method.</param>
+        </member>
+        <member name="M:CBOExtender.Decoration.#ctor(CBOExtender.DecorationDelegate,System.Object[],System.Boolean)">
+            <param name="aspectHandler">The delegate of aspect method.</param>
+            <param name="parameters">The object array as parameters for the aspect method.</param>
+            <param name="bSuppressException">"true" - Catch and Supress exception thrown from the aspect method;
+                                             "false" - Do not catch the exception thrown from the aspect method.</param>
+        </member>
+        <member name="P:CBOExtender.Decoration.Parameters">
+            <value>An object array</value>
+        </member>
+        <member name="T:CBOExtender.Decoration2">
+            Has an aspect method (DecorationDelegate2) and a dynamic type parameter for the method
+        </member>
+        <member name="M:CBOExtender.Decoration2.#ctor(CBOExtender.DecorationDelegate2,System.Object)">
+            <param name="aspectHandler">The delegate of aspect method.</param>
+            <param name="parameter">The dynamic type parameter for the aspect method.</param>
+        </member>
+        <member name="M:CBOExtender.Decoration2.#ctor(CBOExtender.DecorationDelegate2,System.Object,System.Boolean)">
+            <param name="aspectHandler">The delegate of aspect method.</param>
+            <param name="parameter">The dynamic type parameter for the aspect method.</param>
+            <param name="bSuppressException">"true" - Catch and Supress exception thrown from the aspect method;
+                                             "false" - Do not catch the exception thrown from the aspect method.</param>
+        </member>
+        <member name="P:CBOExtender.Decoration2.Parameter">
+            <value>An object array</value>
+        </member>
+        <member name="T:CBOExtender.ObjectProxy">
+            
+        </member>
+        <member name="M:CBOExtender.ObjectProxy.#ctor(System.Object,System.String[],CBOExtender.Decoration,CBOExtender.Decoration)">
+            
+        </member>
+        <member name="M:CBOExtender.ObjectProxy.CreateObjRef(System.Type)">
+            
+        </member>
+        <member name="M:CBOExtender.ObjectProxy.CanCastTo(System.Type,System.Object)">
+            
+        </member>
+        <member name="M:CBOExtender.ObjectProxy.Invoke(System.Runtime.Remoting.Messaging.IMessage)">
+            
+        </member>
+        <member name="P:CBOExtender.ObjectProxy.TypeName">
+            
+        </member>
+        <member name="T:CBOExtender.ObjectProxy`1">
+            
+        </member>
+        <member name="M:CBOExtender.ObjectProxy`1.#ctor(System.Object,System.String[],CBOExtender.Decoration,CBOExtender.Decoration)">
+            
+        </member>
+        <member name="M:CBOExtender.ObjectProxy`1.CreateObjRef(System.Type)">
+            
+        </member>
+        <member name="M:CBOExtender.ObjectProxy`1.CanCastTo(System.Type,System.Object)">
+            
+        </member>
+        <member name="M:CBOExtender.ObjectProxy`1.Invoke(System.Runtime.Remoting.Messaging.IMessage)">
+            
+        </member>
+        <member name="P:CBOExtender.ObjectProxy`1.TypeName">
+            
+        </member>
+        <member name="T:CBOExtender.ObjectProxy2`1">
+            
+        </member>
+        <member name="M:CBOExtender.ObjectProxy2`1.#ctor(System.Object,System.String[],CBOExtender.Decoration2,CBOExtender.Decoration2)">
+            
+        </member>
+        <member name="M:CBOExtender.ObjectProxy2`1.CreateObjRef(System.Type)">
+            
+        </member>
+        <member name="M:CBOExtender.ObjectProxy2`1.CanCastTo(System.Type,System.Object)">
+            
+        </member>
+        <member name="M:CBOExtender.ObjectProxy2`1.Invoke(System.Runtime.Remoting.Messaging.IMessage)">
+            
+        </member>
+        <member name="P:CBOExtender.ObjectProxy2`1.TypeName">
+            
+        </member>
+        <member name="T:CBOExtender.ObjectProxyFactory">
+            <summary>
+            ObjectProxyFactory
+            </summary>
+        </member>
+        <member name="M:CBOExtender.ObjectProxyFactory.CreateProxy(System.Object,System.String[],CBOExtender.Decoration,CBOExtender.Decoration)">
+            <param name="target">The original object.</param>
+            <param name="arrMethods">Method names (separated by comma) to be attached additional aspects.</param>
+            <param name="preAspect">Preprocessing aspect.</param>
+            <param name="postAspect">Postprocessing aspect.</param>
+            <returns>The object returned.</returns>
+        </member>
+        <member name="M:CBOExtender.ObjectProxyFactory.CreateProxy``1(System.Object,System.String[],CBOExtender.Decoration,CBOExtender.Decoration)">
+            <typeparam name="T">The interface type to be returned.</typeparam>
+            <param name="target">The original object.</param>
+            <param name="arrMethods">Method names (separated by comma) to be attached additional aspects.</param>
+            <param name="preAspect">Preprocessing aspect.</param>
+            <param name="postAspect">Postprocessing aspect.</param>
+            <returns>The interface type returned.</returns>
+        </member>
+        <member name="M:CBOExtender.ObjectProxyFactory.CreateProxy2``1(System.Object,System.String[],CBOExtender.Decoration2,CBOExtender.Decoration2)">
+            <typeparam name="T">The interface type to be returned.</typeparam>
+            <param name="target">The original object.</param>
+            <param name="arrMethods">Method names (separated by comma) to be attached additional aspects.</param>
+            <param name="preAspect">Preprocessing aspect.</param>
+            <param name="postAspect">Postprocessing aspect.</param>
+            <returns>The interface type returned.</returns>
+        </member>
+        <member name="T:CBOExtender.Configuration.AspectObjectConfigElement">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectConfigElement.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectConfigElement.#ctor">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectConfigElement.#ctor(System.String)">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectConfigElement.DeserializeElement(System.Xml.XmlReader,System.Boolean)">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectConfigElement.SerializeElement(System.Xml.XmlWriter,System.Boolean)">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectConfigElement.IsModified">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectConfigElement.Name">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectConfigElement.TargetType">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectConfigElement.Interface">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectConfigElement.Methods">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectConfigElement.PreDecoration">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectConfigElement.PostDecoration">
+            
+        </member>
+        <member name="T:CBOExtender.Configuration.AspectObjectsCollection">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectsCollection.#ctor">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectsCollection.CreateNewElement">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectsCollection.CreateNewElement(System.String)">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectsCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectsCollection.IndexOf(CBOExtender.Configuration.AspectObjectConfigElement)">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectsCollection.Add(CBOExtender.Configuration.AspectObjectConfigElement)">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectsCollection.BaseAdd(System.Configuration.ConfigurationElement)">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectsCollection.RemoveAt(System.Int32)">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectsCollection.Remove(System.String)">
+            
+        </member>
+        <member name="M:CBOExtender.Configuration.AspectObjectsCollection.Clear">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectsCollection.CollectionType">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectsCollection.AddElementName">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectsCollection.ClearElementName">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectsCollection.RemoveElementName">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectsCollection.Count">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectsCollection.Item(System.Int32)">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.AspectObjectsCollection.Item(System.String)">
+            
+        </member>
+        <member name="T:CBOExtender.Configuration.DynamicDecoratorSection">
+            
+        </member>
+        <member name="P:CBOExtender.Configuration.DynamicDecoratorSection.objectTemplates">
+            
+        </member>
+        <member name="T:CBOExtender.AOPContainer">
+            Abstract base class AOPContainer
+        </member>
+        <member name="M:CBOExtender.AOPContainer.ObjectContainer">
+            Abstract method that must be implemented by a derived class to return an IoC container object.
+        </member>
+        <member name="M:CBOExtender.AOPContainer.ObjectResolver``1">
+            Abstract method that must be implemented by a derived class to return an object resolved by an IoC container.
+        </member>
+        <member name="M:CBOExtender.AOPContainer.Resolve``2">
+            <typeparam name="T">The type to be resolved.</typeparam>
+            <typeparam name="V">The interface type to be returned.</typeparam>
+            <returns>The interface type returned.</returns>
+        </member>
+        <member name="M:CBOExtender.AOPContainer.Resolve``2(System.String)">
+            <typeparam name="T">The type to be resolved.</typeparam>
+            <typeparam name="V">The interface type to be returned.</typeparam>
+            <param name="methods">Method names (separated by comma).</param>
+            <returns>The interface type returned.</returns>
+        </member>
+        <member name="M:CBOExtender.AOPContainer.GetTarget``1">
+            <typeparam name="T">The target type.</typeparam>
+            <returns>The target type returned.</returns>
+        </member>
+        <member name="M:CBOExtender.AOPContainer.RegisterAspect``2(System.String,CBOExtender.Decoration,CBOExtender.Decoration)">
+            <typeparam name="T">The target type.</typeparam>
+            <typeparam name="V">The interface type to be added preprocessing and postprocessing aspects.</typeparam>
+            <param name="methods">Method names (separated by comma) to be attached additional aspects.</param>
+            <param name="preDeco">Preprocessing aspect.</param>
+            <param name="postDeco">Postprocessing aspect.</param>
+            <returns>AOPContainer.</returns>
+        </member>
+        <member name="M:CBOExtender.AOPContainer.ChainAspect``2(``0,System.String,CBOExtender.Decoration,CBOExtender.Decoration)">
+            <typeparam name="T">The target type.</typeparam>
+            <typeparam name="V">The interface type to be added preprocessing and postprocessing aspects.</typeparam>
+            <param name="target">The original object.</param>
+            <param name="methods">Method names (separated by comma) to be attached additional aspects.</param>
+            <param name="preDeco">Preprocessing aspect.</param>
+            <param name="postDeco">Postprocessing aspect.</param>
+            <returns>The interface type returned.</returns>
+        </member>
+        <member name="M:CBOExtender.AOPContainer.Resolve2``2">
+            <typeparam name="T">The type to be resolved.</typeparam>
+            <typeparam name="V">The interface type to be returned.</typeparam>
+            <returns>The interface type returned.</returns>
+        </member>
+        <member name="M:CBOExtender.AOPContainer.Resolve2``2(System.String)">
+            <typeparam name="T">The type to be resolved.</typeparam>
+            <typeparam name="V">The interface type to be returned.</typeparam>
+            <param name="methods">Method names (separated by comma).</param>
+            <returns>The interface type returned.</returns>
+        </member>
+        <member name="M:CBOExtender.AOPContainer.RegisterAspect2``2(System.String,CBOExtender.Decoration2,CBOExtender.Decoration2)">
+            <typeparam name="T">The target type.</typeparam>
+            <typeparam name="V">The interface type to be added preprocessing and postprocessing aspects.</typeparam>
+            <param name="methods">Method names (separated by comma) to be attached additional aspects.</param>
+            <param name="preDeco">Preprocessing aspect.</param>
+            <param name="postDeco">Postprocessing aspect.</param>
+            <returns>AOPContainer.</returns>
+        </member>
+        <member name="M:CBOExtender.AOPContainer.ChainAspect2``2(``0,System.String,CBOExtender.Decoration2,CBOExtender.Decoration2)">
+            <typeparam name="T">The target type.</typeparam>
+            <typeparam name="V">The interface type to be added preprocessing and postprocessing aspects.</typeparam>
+            <param name="target">The original object.</param>
+            <param name="methods">Method names (separated by comma) to be attached additional aspects.</param>
+            <param name="preDeco">Preprocessing aspect.</param>
+            <param name="postDeco">Postprocessing aspect.</param>
+            <returns>The interface type returned.</returns>
+        </member>
+        <member name="P:CBOExtender.AOPContainer.IocContainer">
+            <value>An IocContainer object.</value>
+        </member>
+    </members>
+</doc>
